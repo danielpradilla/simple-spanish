@@ -108,3 +108,17 @@ Las tareas, claves, asignación y decisiones de privacidad del
 [piloto](../evals/reader-study.md) son propias. El PDF conserva su licencia;
 no se distribuye ni se presenta bajo la MIT de este proyecto.
 
+
+## Formato y carga de referencias
+
+La [especificación de Agent Skills](https://agentskills.io/specification)
+define los campos de metadatos y la carga progresiva de instrucciones y recursos.
+Se mantiene una entrada breve con referencias por tarea, sin scripts ni requisitos
+de un cliente concreto. La recomendación de menos de 500 líneas no es una prueba
+de comprensión ni garantiza que un agente siga las instrucciones.
+
+La [documentación de skills de Claude Code](https://code.claude.com/docs/en/skills)
+sirve para preparar una prueba nativa de descubrimiento y lecturas observables.
+Ese ensayo usa un plugin temporal de prueba; no añade un plugin al paquete ni
+demuestra compatibilidad con todos los agentes.
+

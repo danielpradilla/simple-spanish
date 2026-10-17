@@ -1,0 +1,63 @@
+[
+  {
+    "id": "activacion-procedimiento-espanol",
+    "request": "Simplifica este procedimiento en español: «La rotación del certificado, que podría interrumpir el servicio, se llevará a cabo únicamente si el nodo se encuentra en estado healthy».",
+    "expected_activation": true,
+    "required_references": [
+      "references/use-cases.md"
+    ],
+    "avoid_references": [
+      "references/translation.md",
+      "references/documents.md",
+      "references/sources.md",
+      "evals/"
+    ]
+  },
+  {
+    "id": "activacion-traduccion-fragmento",
+    "request": "Translate this API documentation into Spanish: In this service, a signed adjustment is a numeric value that may be positive, negative, or zero. It does not require a digital signature.",
+    "expected_activation": true,
+    "required_references": [
+      "references/translation.md"
+    ],
+    "avoid_references": [
+      "references/documents.md",
+      "references/sources.md",
+      "evals/"
+    ]
+  },
+  {
+    "id": "activacion-traduccion-documento",
+    "request": "Traduce este README al español para sus administradores:\n\n# Maintenance\n\n## Before update\n\nOnly accounts with the `operator` role may update. Updating may interrupt the service. You may update only if the status is `drained` and the backup is verified.\n\n```sh\nservice-demo update --dry-run\n```\n\n## Resume\n\nAfter update, run `service-demo resume` to admit new jobs.",
+    "expected_activation": true,
+    "required_references": [
+      "references/translation.md",
+      "references/documents.md",
+      "references/use-cases.md"
+    ],
+    "avoid_references": [
+      "references/sources.md",
+      "evals/"
+    ]
+  },
+  {
+    "id": "no-activacion-ingles",
+    "request": "Rewrite this error message in clear English, not Spanish: The request could not be completed due to a possible data-format issue or client-version mismatch.",
+    "expected_activation": false,
+    "required_references": [],
+    "avoid_references": [
+      "references/",
+      "evals/"
+    ]
+  },
+  {
+    "id": "no-activacion-poema",
+    "request": "Escribe un poema de cuatro versos en español sobre la lluvia.",
+    "expected_activation": false,
+    "required_references": [],
+    "avoid_references": [
+      "references/",
+      "evals/"
+    ]
+  }
+]

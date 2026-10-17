@@ -1,103 +1,100 @@
 # Simple Spanish
 
-An agent skill for clear Spanish technical writing. It rewrites documentation,
-procedures, UI text, errors, and agent instructions without changing their meaning.
+Skill para redactar, traducir al español y revisar documentación técnica. Su prioridad es conservar el significado antes de mejorar el estilo.
 
-Inspired by [ESTE](https://github.com/esadrian/este-skill) and
-[Simple English](https://github.com/AminBlg/SimpleEnglish). This project adapts
-their useful patterns and addresses findings from an adoption review.
-It is an independent project, not an official release of either skill.
+Se inspira en [ESTE](https://github.com/esadrian/este-skill) y [Simple English](https://github.com/AminBlg/SimpleEnglish). Adapta sus patrones útiles y corrige hallazgos de una revisión de adopción. Es un proyecto independiente, no una versión oficial de esas skills.
 
-## Install and use
+<a id="install-and-use"></a>
 
-For an agent that supports the skills CLI:
+## Instalación global
+
+En un agente compatible con la CLI de skills:
 
 ```sh
-npx skills add danielpradilla/simple-spanish
+npx skills add danielpradilla/simple-spanish -g
 ```
 
-You can also copy this repository into your agent's skill directory under
-`simple-spanish/`. Keep `SKILL.md` and its relative reference folders together.
-This skill has no runtime dependencies, executable hooks, or bundled installer.
-The skills CLI is a separate tool.
+También puedes copiar este repositorio al directorio de skills de tu agente, dentro de `simple-spanish/`. Mantén `SKILL.md` y sus carpetas relativas juntas. El paquete no incluye dependencias de ejecución, scripts, hooks ni instalador propio. La CLI de skills es una herramienta externa.
 
-Example requests:
+## Uso
 
 ```text
 Reescribe este procedimiento con simple-spanish.
+Traduce esta documentación al español. Conserva los comandos y las etiquetas publicadas.
 Revisa este mensaje de error sin añadir causas ni soluciones.
-Simplifica esta documentación. Conserva los comandos y las etiquetas publicadas.
 ```
 
-The skill follows the requested output format. A rewrite returns the revised
-text alone, unless an unresolved ambiguity needs a short note.
-A review reports the problem, original passage, rule ID, and a safe correction.
-It does not apply to unrelated conversation or change your agent settings.
+El agente debe poder descubrir la skill. Su descripción incluye disparadores de español claro y traducción técnica; también puedes nombrarla de forma explícita. La activación automática depende del cliente y del modelo.
 
-## Rules that protect meaning
+La respuesta esperada en una reescritura es solo el texto revisado, salvo que falte información necesaria y deba señalarse una ambigüedad. En una revisión, se pide informar del problema, el fragmento original, el ID de regla y una corrección que conserve el significado. Las instrucciones piden respetar el formato solicitado, sin imponer español a toda la conversación ni cambiar la configuración del agente.
 
-- Keep facts, uncertainty, negation, requirements, permissions, conditions, and exceptions.
-- Keep code, commands, placeholders, paths, quoted errors, and published UI labels unchanged.
-- Put warnings before the affected action and conditions before commands.
-- Do not invent actors, causes, response fields, recovery steps, or guarantees.
-- Keep domain distinctions such as user versus account, or membership removal versus deletion.
-- Use natural Spanish, including valid gerunds, the subjunctive, and meaningful compound tenses.
+<a id="rules-that-protect-meaning"></a>
 
-Sentence-length targets are editing aids, not compliance tests.
-The project does not use automatic word replacement or a universal Spanish dictionary.
+## Prioridades de revisión
 
-## Example
+- Conservar hechos, incertidumbre, negaciones, obligaciones, permisos, condiciones y excepciones.
+- Conservar código, comandos, marcadores, rutas, errores citados y etiquetas publicadas. La prosa de un mensaje de UI es editable si esa es la tarea; sus literales citados siguen protegidos.
+- Colocar la advertencia antes de la acción afectada y la condición antes del mandato.
+- No inventar actores, causas, campos de respuesta, pasos de recuperación ni garantías.
+- Distinguir usuario y cuenta, quitar una pertenencia y eliminar un registro, pausar y esperar a que terminen los trabajos.
+- Usar español natural, con gerundios válidos, subjuntivo y tiempos compuestos cuando aporten significado.
+
+Los objetivos de longitud son ayudas editoriales, no pruebas de conformidad. No se hacen sustituciones automáticas ni se impone un diccionario universal.
+
+## Traducción y documentos completos
+
+La [guía de traducción](references/translation.md) pide consultar definiciones, contexto y glosarios antes de elegir equivalentes. Contrasta conceptos como cantidad con signo y documento firmado, o confirmación de UI y transacción guardada.
+
+La [guía documental](references/documents.md) indica cómo conservar las relaciones entre secciones, los enlaces, las anclas, los ejemplos y los diagramas. Traducir prosa no autoriza cambiar código, contratos de datos ni etiquetas de una interfaz publicada.
+
+La entrada principal pide leer todas las referencias que correspondan y no cargar los corpus ni los resultados al redactar. La [prueba nativa](evals/activation.md) registró lecturas incompletas: son instrucciones, no un comportamiento garantizado.
+
+<a id="example"></a>
+
+## Ejemplo
 
 Original:
 
 > Se recomienda que active las alertas. Si así lo desea, puede desactivar los avisos por correo.
 
-Revision:
+Revisión:
 
 > Se recomienda activar las alertas. Si lo desea, puede desactivar los avisos por correo.
 
-The recommendation remains a recommendation. Disabling email notices remains optional.
-See [more examples](examples/before-after.md) for API uncertainty, destructive
-commands, unknown actors, and existing UI labels.
+La recomendación sigue siendo una recomendación. Desactivar los avisos sigue siendo opcional. Hay [más ejemplos](examples/before-after.md) de incertidumbre, comandos destructivos, actores desconocidos y etiquetas existentes.
 
-## Sources and design choices
+<a id="sources-and-design-choices"></a>
 
-The [source record](references/sources.md) links the exact ESTE and Simple English
-revisions reviewed. It records what this project adapts and what it changes.
-It also explains the source and review limits.
+## Fuentes y decisiones
 
-Other sources include the European Commission's Spanish clarity guide,
-Microsoft's neutral Spanish localization guide, and RAE/ASALE references.
-These sources inform the skill. They do not endorse it.
+El [registro de fuentes](references/sources.md) fija las revisiones consultadas de ESTE y Simple English y explica qué se adapta y qué se cambia.
 
-## Regression cases
+Las fuentes también incluyen a la Comisión Europea, Microsoft, RAE/ASALE, MQM y Agent Skills, además de estudios sobre evaluación con lectores. Se distinguen las guías de estilo, la revisión de fidelidad y la comprensión observada. Su inclusión no implica respaldo a este proyecto ni permite transferir automáticamente sus resultados a esta skill.
 
-[evals/cases.json](evals/cases.json) contains 21 complete writing cases.
-Each case records the meaning and exact strings that must survive a rewrite.
-Reference outputs are examples, not exact-match answers.
-The [evaluation guide](evals/README.md) explains how to run and review them
-with any model. Semantic review is required; string matching alone is not enough.
-The separate [translation corpus](evals/translation-cases.json) adds 12 synthetic
-English-to-Spanish cases with contrasting technical meanings. It checks concepts
-and operational effects, not a universal dictionary of word replacements.
-The [document corpus](evals/document-cases.json) adds two multi-section examples
-for distributed context, cross-references, code, and documentary diagrams.
-Saved [smoke responses and review limits](evals/results/README.md) are available.
-They are not a reader study or a reliability benchmark.
-A [reader pilot](evals/reader-study.md) includes passages, tasks, and answer keys.
-It has no participant results.
+<a id="regression-cases"></a>
 
-## Scope and limits
+## Pruebas y evidencia
 
-Use this skill for technical and factual prose, not creative writing or marketing.
-It does not guarantee a single interpretation, reader comprehension, or safe
-operation. A person who knows the domain must review safety-critical text.
+- [Reescritura](evals/cases.json), [traducción contrastiva](evals/translation-cases.json) y [documentos completos](evals/document-cases.json): pasajes, requisitos semánticos y literales protegidos. Las referencias son respuestas posibles, no cadenas obligatorias.
+- [Protocolo de comparación](evals/README.md): entradas comunes, versiones fijadas, contextos independientes y revisión separada de fidelidad y claridad.
+- [Activación y carga de referencias](evals/activation.md): peticiones positivas y negativas con lecturas observables en un cliente nativo.
+- [Piloto con lectores](evals/reader-study.md): dos pasajes, diez tareas, claves y asignación que evita mostrar ambas versiones del mismo contenido a una persona. No hay participantes ni resultados humanos.
+- [Registros y límites](evals/results/README.md): respuestas crudas, configuración, revisiones, desacuerdos y ensayos excluidos. La comparación histórica de `b7de0eb` no se presenta como una prueba de instrucciones posteriores.
 
-This project does not claim compliance with ASD-STE100, ISO 24495-1,
-UNE 153101, or Lectura Fácil requirements. It includes no standards dictionary.
-An English rule is not automatically a valid Spanish rule.
+La coincidencia de literales no demuestra fidelidad. La preferencia de un modelo no mide comprensión. Los [cambios publicados](CHANGELOG.md) mantienen estas distinciones.
 
-## License
+<a id="scope-and-limits"></a>
 
-[MIT](LICENSE). The license retains the notices for esadrian and AminBlg.
-The linked external guides keep their own terms. Their full texts are not bundled.
+## Límites
+
+El alcance es la prosa técnica y factual, no la escritura creativa ni el marketing. Las instrucciones no garantizan que un modelo las siga ni que cada lector entienda el resultado. Una persona que conozca el dominio debe revisar los textos con consecuencias de seguridad, legales u operativas.
+
+La prueba nativa observó referencias obligatorias omitidas y una advertencia situada después de la acción afectada. Esos fallos se conservan en los resultados. La activación correcta no basta para adoptar salidas sin revisión.
+
+No se declara conformidad con ASD-STE100, ISO 24495-1, UNE 153101 ni requisitos de Lectura Fácil. El paquete no incluye un diccionario de normas. Una regla del inglés no es automáticamente válida en español.
+
+<a id="license"></a>
+
+## Licencia
+
+[MIT](LICENSE). Se conservan los avisos de esadrian y AminBlg. Las guías externas mantienen sus condiciones de uso; no se distribuyen sus textos completos.

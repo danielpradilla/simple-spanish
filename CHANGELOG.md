@@ -1,6 +1,6 @@
 # Changelog
 
-## En desarrollo
+## 0.2.0 (2026-10-17)
 
 - Añadir doce casos sintéticos contrastivos de traducción técnica con requisitos semánticos y literales protegidos.
 - Consultar definiciones y glosarios del proyecto antes de elegir equivalentes técnicos, sin imponer un diccionario universal.
@@ -9,6 +9,7 @@
 - Revisar el documento completo, sus referencias y sus capas editables; añadir dos documentos sintéticos con código y diagramas.
 - Separar fidelidad, claridad y comprensión; registrar comparaciones con entradas comunes, modelo identificado y revisión ciega.
 - Preparar dos pasajes y diez tareas para lectores, con claves, consentimiento y denominadores que incluyen «no lo sé»; conservar las generaciones y sus ajustes sin simular participantes.
+- Añadir disparadores explícitos de traducción y pruebas nativas positivas y negativas; combinar las referencias cuando coinciden varios tipos de tarea y excluir material de evaluación al redactar.
 
 ## 0.1.1 (2026-10-17)
 

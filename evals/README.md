@@ -1,6 +1,10 @@
+<a id="meaning-preservation-cases"></a>
+
 # Evaluación de fidelidad y claridad
 
 Los casos comprueban conservación del significado, límites de seguridad y literales exactos. No exigen una redacción única. Se pueden ejecutar en una interfaz de chat o una API, sin instalar herramientas ni añadir dependencias.
+
+<a id="case-fields"></a>
 
 ## Corpus y contrato
 
@@ -23,6 +27,8 @@ Cada entrada conserva el contrato existente:
 
 Algunas instrucciones omiten deliberadamente recordatorios de conservación. Comprueban el comportamiento por defecto de la skill. No añadas recordatorios durante la ejecución. Los metadatos de ejecución y revisión pertenecen al registro de resultados, no requieren cambiar este contrato.
 
+La [prueba nativa de activación](activation.md) es independiente. Usa metadatos descubribles y llamadas observables, no la carga manual de todas las referencias. Su archivo de casos tiene otro contrato y sus fallos de lectura se informan aunque la skill se haya seleccionado.
+
 ## Preparar la comparación
 
 Compara v0.1.1 y la candidata con las mismas entradas, instrucciones, modelo y configuración. Fija antes de generar:
@@ -34,6 +40,8 @@ Compara v0.1.1 y la candidata con las mismas entradas, instrucciones, modelo y c
 5. La rúbrica de revisión, quién revisa y qué casos se reservan para una comprobación posterior.
 
 Usa un identificador de modelo resuelto cuando la interfaz lo exponga. Si solo ofrece un alias como `default`, registra el alias y los datos no disponibles. Conserva la ejecución como exploratoria; no la describas como una comparación con modelo plenamente identificado ni como una repetición exacta de los registros históricos. Cualquier diferencia de modelo, configuración o contexto impide atribuir por sí sola el cambio a la skill.
+
+<a id="run-a-case"></a>
 
 ## Generar las respuestas
 
@@ -52,6 +60,8 @@ La revisión debe estar separada de la generación, preferiblemente con otro rev
 Revisa primero cada salida por su fidelidad y cumplimiento de la tarea. Compara después la claridad solo de los pares en los que ambas salidas sean fieles y cumplan la tarea. Si solo una lo hace, registra la diferencia de fidelidad; no la conviertas en una victoria de claridad. Guarda los juicios antes de revelar las versiones.
 
 Un modelo puede ayudar a revisar, pero se registran por separado su identidad, configuración, instrucciones y dictamen. No mezcles ese dictamen con la respuesta evaluada ni lo llames revisión humana. Una discrepancia de interpretación requiere revisión humana o del responsable del dominio; un voto automático no la resuelve. Conserva el desacuerdo y su resolución, si la hay.
+
+<a id="decide-whether-it-passes"></a>
 
 ## Fidelidad y cumplimiento de la tarea
 
@@ -87,6 +97,8 @@ Si no hubo estudio con lectores, escribe `comprensión humana no evaluada`. Una 
 
 El [piloto con lectores](reader-study.md) incluye dos pasajes, sus variantes, diez tareas, claves y asignación sin exposición repetida al mismo contenido. También fija consentimiento, retirada de notas y recuento de «no lo sé». Son materiales para sesiones reales; no contienen resultados de participantes.
 
+<a id="record-the-run"></a>
+
 ## Registro mínimo
 
 Puedes registrar la ejecución y la revisión en archivos de texto o JSON con las herramientas existentes. No hace falta un ejecutor nuevo. Este esquema enumera los campos que deben completarse con datos observados; no contiene resultados de una ejecución:
@@ -110,6 +122,8 @@ Si das proporciones, limítalas a esas ejecuciones y decisiones de revisión. No
 Reserva casos que no se usen para ajustar la candidata ni se muestren durante su desarrollo. Fija su selección y revisión antes de probarlos. En la evaluación reservada, el generador recibe solo su tarea y entrada, como en los demás casos. Si no hay una reserva real, decláralo. Cuando un caso reservado se inspecciona y se usa para corregir la skill, pasa a desarrollo; no lo sigas presentando como evidencia no vista. Las regresiones conocidas comprueban que no reaparece un fallo en esos ejemplos. Evaluar generalización exige entradas nuevas de otros contextos, no solo cambiar nombres o cifras de un caso conocido. No retires un requisito de seguridad porque ambas versiones lo cumplan ni cambies los criterios a mitad de comparación para favorecer una salida. Los requisitos defectuosos se corrigen en una revisión posterior con el motivo documentado, conservando los registros anteriores.
 
 El protocolo toma de la [guía oficial de evaluación de Agent Skills](https://agentskills.io/skill-creation/evaluating-skills.md) la comparación con una versión previa, el aislamiento de contexto, la conservación de salidas y la revisión con evidencia. Mantiene el contrato local y no requiere sus plataformas ni formatos de ejemplo.
+
+<a id="saved-smoke-runs"></a>
 
 ## Resultados históricos
 

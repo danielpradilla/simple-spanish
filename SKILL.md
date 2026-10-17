@@ -2,14 +2,16 @@
 name: simple-spanish
 description: >
   Write, rewrite, or review clear Spanish technical text without changing its
-  meaning. Use for Spanish documentation, READMEs, runbooks, error messages,
-  UI text, API guides, release notes, and agent instructions. Also use for
-  español claro, español técnico simplificado, simplifica este texto,
-  desambigua, or plain Spanish. Preserve uncertainty, requirements, safety
-  conditions, code, and published labels. Not for creative or marketing copy.
+  meaning. Also translate technical documentation into Spanish when requested.
+  Use for Spanish documentation, READMEs, runbooks, error messages, UI text,
+  API guides, release notes, and agent instructions. Also use for traduce al
+  español, traducción técnica, español claro, español técnico simplificado,
+  simplifica este texto, desambigua, or plain Spanish. Preserve uncertainty,
+  requirements, safety conditions, code, and published labels.
+  Not for creative or marketing copy.
 license: MIT
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
 ---
 
 # Simple Spanish
@@ -24,18 +26,23 @@ Aplica estas reglas al texto en español solicitado, no a toda la conversación.
 No traduzcas contenido de otro idioma salvo que el usuario lo pida.
 Respeta el formato solicitado y el glosario del proyecto.
 
-Antes de redactar un procedimiento, error, texto de UI o instrucción para un
-agente, lee [references/use-cases.md](references/use-cases.md).
-Para dudas de gramática o terminología, lee
-[references/spanish.md](references/spanish.md).
-Si traduces documentación técnica, lee
-[references/translation.md](references/translation.md) para identificar los
-conceptos y consultar el contexto antes de elegir equivalentes.
-Si traduces o revisas un documento completo, lee
-[references/documents.md](references/documents.md) para conservar el contexto
-entre secciones y los contratos de enlaces, ejemplos y diagramas.
-Las fuentes y las diferencias con ESTE y simple-english están en
-[references/sources.md](references/sources.md).
+Antes de redactar, reescribir o revisar, lee las referencias indicadas para
+la tarea. Si se cumplen varias condiciones, lee todas las correspondientes:
+
+- Procedimiento, error, texto de UI o instrucción para un agente:
+  [references/use-cases.md](references/use-cases.md).
+- Traducción técnica: [references/translation.md](references/translation.md).
+  Identifica los conceptos y consulta el contexto antes de elegir equivalentes.
+- Documento completo: [references/documents.md](references/documents.md).
+  Conserva el contexto entre secciones y los contratos de enlaces y ejemplos.
+- Dudas de gramática o terminología:
+  [references/spanish.md](references/spanish.md).
+- Consulta de procedencia o límites de estas reglas:
+  [references/sources.md](references/sources.md), con las fuentes y diferencias
+  respecto de ESTE y simple-english.
+
+No cargues los corpus, protocolos ni resultados de evaluación al redactar
+un texto. Son materiales para evaluar la skill, no referencias de redacción.
 
 ## Reglas
 
