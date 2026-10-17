@@ -71,3 +71,12 @@ Simple Spanish no reproduce su diccionario ni declara conformidad con él.
 Tampoco declara conformidad con ISO 24495-1 o UNE 153101.
 El lenguaje claro y la Lectura Fácil tienen alcances distintos.
 Esta skill no sustituye una evaluación de accesibilidad ni una revisión del dominio.
+
+## Contexto conceptual y evaluación de traducciones
+
+El [catálogo de errores MQM](https://www.themqm.org/mqm-pillars/the-mqm-full-typology/)
+distingue terminología incorrecta, relaciones técnicas alteradas y ambigüedad
+introducida en la traducción. Se usa para concretar la revisión del significado
+y del contexto. No se reproduce su catálogo completo ni se declara conformidad
+o una puntuación MQM. Los ejemplos de traducción de esta skill son sintéticos;
+sus equivalentes dependen del contexto y no forman un diccionario universal.

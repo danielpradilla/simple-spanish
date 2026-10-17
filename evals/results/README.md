@@ -55,3 +55,9 @@ las instrucciones completas y las opciones no expuestas como no disponibles.
 Los doce casos conservan los literales protegidos en esta ejecución.
 Esto no es una aprobación semántica ni una medición de comprensión humana.
 Los registros históricos anteriores no se sustituyen.
+
+El identificador `unlimited-company` se hizo explícito en la fuente del corpus
+después de esta línea base. El registro conserva la entrada original, que podía
+leerse como una descripción traducible del plan. No compares su respuesta con
+una entrada posterior distinta. Las comparaciones nuevas deben usar la misma
+revisión del corpus en ambas ramas.

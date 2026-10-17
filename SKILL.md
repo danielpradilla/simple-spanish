@@ -28,6 +28,9 @@ Antes de redactar un procedimiento, error, texto de UI o instrucción para un
 agente, lee [references/use-cases.md](references/use-cases.md).
 Para dudas de gramática o terminología, lee
 [references/spanish.md](references/spanish.md).
+Si traduces documentación técnica, lee
+[references/translation.md](references/translation.md) para identificar los
+conceptos y consultar el contexto antes de elegir equivalentes.
 Las fuentes y las diferencias con ESTE y simple-english están en
 [references/sources.md](references/sources.md).
 

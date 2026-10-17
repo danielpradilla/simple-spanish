@@ -2,7 +2,7 @@
   {
     "id": "sintetico-plazas-usuarios-por-empresa",
     "task": "Traduce este texto al español claro sin añadir información.",
-    "input": "Synthetic example. The unlimited-company plan allows unlimited user seats within one company. If a company already has 40 users, adding user 41 does not reach a seat limit. The plan still covers only one company; it does not allow unlimited companies.",
+    "input": "Synthetic example. The plan with identifier unlimited-company allows unlimited user seats within one company. If a company already has 40 users, adding user 41 does not reach a seat limit. The plan still covers only one company; it does not allow unlimited companies.",
     "must_preserve": [
       "El caso es sintético y unlimited-company es el identificador del plan.",
       "Lo ilimitado son las plazas de usuario dentro de una empresa, no la cantidad de empresas.",
@@ -10,7 +10,7 @@
       "El plan sigue cubriendo solo una empresa; afirmar que permite empresas ilimitadas invierte el alcance."
     ],
     "protected_literals": ["unlimited-company", "40", "41"],
-    "reference_output": "Ejemplo sintético. El plan unlimited-company permite un número ilimitado de plazas de usuario dentro de una empresa. Si la empresa ya tiene 40 usuarios, añadir el usuario 41 no alcanza un límite de plazas. El plan sigue cubriendo solo una empresa; no permite un número ilimitado de empresas."
+    "reference_output": "Ejemplo sintético. El plan con identificador unlimited-company permite un número ilimitado de plazas de usuario dentro de una empresa. Si la empresa ya tiene 40 usuarios, añadir el usuario 41 no alcanza un límite de plazas. El plan sigue cubriendo solo una empresa; no permite un número ilimitado de empresas."
   },
   {
     "id": "sintetico-plazas-empresas-ilimitadas",
