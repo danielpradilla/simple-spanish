@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 (2026-10-17)
+
+- Distinguish editable error and UI copy from protected literals quoted inside it.
+- Identify warning targets and remove an unsupported request-failure outcome from an example.
+- Keep an already clear confirmation unchanged and clarify Spanish gerund guidance.
+- Add two regression cases for existing UI copy and noun-modifying gerunds, for 21 cases in total.
+
 ## 0.1.0 (2026-10-17)
 
 - Add a Spanish technical-writing skill with meaning-preservation rules and protected literals.

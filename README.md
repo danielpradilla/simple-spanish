@@ -72,7 +72,7 @@ These sources inform the skill. They do not endorse it.
 
 ## Regression cases
 
-[evals/cases.json](evals/cases.json) contains 19 complete writing cases.
+[evals/cases.json](evals/cases.json) contains 21 complete writing cases.
 Each case records the meaning and exact strings that must survive a rewrite.
 Reference outputs are examples, not exact-match answers.
 The [evaluation guide](evals/README.md) explains how to run and review them

@@ -16,7 +16,7 @@ Original:
 
 Revisión:
 
-> La rotación puede interrumpir el servicio.
+> La rotación del certificado puede interrumpir el servicio.
 > Solo si el nodo está en estado `healthy`, rota el certificado.
 
 No cambies una comprobación en un permiso para continuar cuando falle.
@@ -39,7 +39,9 @@ Revisión:
 
 No añadas que el cliente está desactualizado ni que un campo es incorrecto.
 Ninguna de esas afirmaciones aparece en el original.
-Un mensaje de error citado es un literal protegido, no texto nuevo que debas traducir.
+Un mensaje de error citado dentro de otro texto es un literal protegido.
+Si el usuario pide reescribir el propio mensaje, su prosa es editable.
+Conserva el código, los marcadores y los literales citados dentro de ese mensaje.
 
 ## API y documentación de software
 
@@ -72,9 +74,9 @@ Original:
 
 > ¿Deseas eliminar el proyecto `demo` y todos sus archivos? Esta acción no se puede deshacer.
 
-Revisión:
+Resultado sin cambios, porque el diálogo ya es claro:
 
-> ¿Eliminar el proyecto `demo` y todos sus archivos? No se puede deshacer.
+> ¿Deseas eliminar el proyecto `demo` y todos sus archivos? Esta acción no se puede deshacer.
 
 ## Informes de incidentes y notas de versión
 
@@ -104,7 +106,7 @@ Si el público comprende distintas regiones, busca términos ampliamente
 comprensibles sin declarar incorrectas las variantes locales. Mantén el trato
 del proyecto, incluido el voseo si corresponde.
 
-## Respuestas breves
+## Respuestas de soporte y FAQ
 
 Empieza por la respuesta. Omite saludos de trámite, elogios y cierres vacíos.
 Usa una lista, una tabla o un bloque de código cuando ayuden a usar la información.

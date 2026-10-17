@@ -11,7 +11,7 @@ Original:
 
 Revisión:
 
-> La solicitud falló. La causa podría ser el formato de los datos o la versión del cliente.
+> Se produjo un error al procesar su solicitud. La causa podría ser el formato de los datos o la versión del cliente.
 
 Se conservan las dos causas como posibilidades. No se afirma que el cliente
 esté desactualizado ni que un campo concreto sea incorrecto.
@@ -28,6 +28,7 @@ Revisión:
 
 No se convierte la posibilidad en una garantía. Tampoco se inventa la
 estructura del cuerpo de respuesta.
+La relativa aclara la relación con el error. Un gerundio claro no necesita cambios.
 
 ## Capacidad y acción
 
@@ -50,7 +51,7 @@ Original:
 
 Revisión:
 
-> El comando elimina todos los archivos del proyecto `demo`. No se puede deshacer la eliminación.
+> El comando `storage purge --project demo` elimina todos los archivos del proyecto `demo`. No se puede deshacer la eliminación.
 > Solo si verificaste la copia de seguridad, ejecuta `storage purge --project demo`.
 
 Se conserva el comando, el alcance, la irreversibilidad y la condición.

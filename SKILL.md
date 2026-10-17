@@ -9,7 +9,7 @@ description: >
   conditions, code, and published labels. Not for creative or marketing copy.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Simple Spanish
@@ -41,11 +41,12 @@ cualquier preferencia de estilo de esta skill, incluidos los límites de longitu
    entre obligación, recomendación, permiso y posibilidad. No conviertas
    «podría» en «ocurre», «se recomienda» en «debe» ni una capacidad en una acción.
 2. SS-02. Conserva exactamente código, comandos, opciones, rutas, enlaces,
-   identificadores, marcadores como `%s` y `{count}`, nombres de productos,
-   errores citados y etiquetas de UI publicadas. No reformatees números ni
-   cambies unidades. Las cadenas nuevas que el usuario pide redactar sí son
-   el objeto del trabajo. Un cambio de literales existentes exige una petición
-   explícita; una reescritura de la prosa no lo autoriza.
+   identificadores, marcadores como `%s` y `{count}` y nombres de productos.
+   No reformatees números ni cambies unidades. Conserva los errores citados
+   y las etiquetas publicadas cuando son referencias dentro de otro texto.
+   Si el usuario pide reescribir un mensaje de error o un texto de UI
+   existente, su prosa sí es editable. Conserva los literales que ese texto
+   cita o nombra. Simplificar documentación no autoriza renombrar su UI.
 3. SS-03. No inventes actores, causas, mecanismos, frecuencias, resultados,
    definiciones ni pasos de recuperación. Si una ambigüedad cambia la acción
    o el riesgo, conserva el fragmento y señala qué dato falta. Pregunta solo
@@ -57,6 +58,7 @@ cualquier preferencia de estilo de esta skill, incluidos los límites de longitu
    Después, escribe la condición antes del mandato: «Solo si el nodo está
    listo, reinicia el servicio». Conserva las prohibiciones y el alcance de
    «solo», «salvo» y «a menos que». No inventes una rama contraria.
+   Si mueves una advertencia, identifica en ella la acción o el objeto afectado.
 6. SS-06. Prefiere la voz activa cuando el actor sea conocido y relevante.
    Conserva la pasiva o el «se» si el actor es desconocido. No añadas «el
    sistema» ni «el operador» para rellenar el sujeto. En una instrucción al

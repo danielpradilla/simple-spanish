@@ -40,6 +40,11 @@ Si una construcción deja dudas sobre el actor o el orden, aclárala con la
 información disponible. Si no se conoce la relación, señala la duda en vez
 de inventar «después», «por eso» o un actor.
 
+Corrige construcciones nominales como «archivos conteniendo errores»:
+«archivos que contienen errores». El DPD distingue estos usos especificativos
+de los gerundios válidos. No apliques esa corrección a perífrasis como
+«sigue siendo compatible».
+
 ## Actual y otros posibles calcos
 
 En español, «actual» puede significar presente. «La versión actual» es una
@@ -52,7 +57,7 @@ significado de la frase, no por el parecido de las palabras.
 
 «Eventualmente» no equivale automáticamente al inglés «eventually».
 Conserva su sentido de posibilidad u ocasionalidad cuando sea el de la fuente.
-No sustituyas «a veces» por «al final».
+No traduzcas «eventualmente» como «al final» si significa «a veces» o «posiblemente».
 
 ## Términos distintos
 

@@ -1,6 +1,6 @@
 # Meaning-preservation cases
 
-`cases.json` contains 19 Spanish writing cases. They test meaning, safety boundaries, and exact source strings, not a preferred wording. No runner, provider account, or dependency is required. These fixtures do not report model results or establish a pass rate.
+`cases.json` contains 21 Spanish writing cases. They test meaning, safety boundaries, and exact source strings, not a preferred wording. No runner, provider account, or dependency is required. These fixtures do not report model results or establish a pass rate.
 
 ## Case fields
 
