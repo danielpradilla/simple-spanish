@@ -91,3 +91,20 @@ Una preferencia de estilo no compensa un cambio de significado. La revisión
 por otro modelo no equivale a la revisión de un especialista ni a una prueba
 de comprensión con lectores.
 
+
+## Comprensión con lectores
+
+El [estudio de Bayés-Gil, García-Asensio y Franganillo (2025)](https://doi.org/10.3145/infonomy.25.005)
+separa percepción de claridad y comprensión de un documento tributario.
+Se consultó su resumen público. Sus resultados e instrumentos no validan esta
+skill ni los pasajes técnicos propios de su piloto.
+
+La [guía de Plena inclusión España (2019)](https://www.plenainclusion.org/wp-content/uploads/2021/03/guia_de_evaluacion_de_la_accesibilidad_cognitiva_de_webs_y_apps.pdf)
+inspira las sesiones individuales, la ausencia de pistas y las preguntas
+posteriores (páginas impresas 16 a 19). Su objeto es la organización y navegación
+de webs y apps, no la claridad del contenido (página 6). No se trasladan sus
+cifras de participantes ni su recogida de imágenes, nombres o conductas.
+Las tareas, claves, asignación y decisiones de privacidad del
+[piloto](../evals/reader-study.md) son propias. El PDF conserva su licencia;
+no se distribuye ni se presenta bajo la MIT de este proyecto.
+

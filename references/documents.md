@@ -28,3 +28,5 @@ Algunos encabezados o fragmentos también son entradas de herramientas. Identifi
 ## Revisión final del documento
 
 Recorre una tarea usando las secciones finales, no solo los párrafos aislados. Verifica condiciones, negaciones, advertencias y referencias cruzadas. Comprueba los ejemplos y diagramas contra la fuente. No declares enlaces, ejecución o renderizado verificados si solo comparaste su texto.
+
+Comprueba que el lector pueda encontrar la acción permitida, sus condiciones, el resultado y el riesgo que la fuente describe. Si falta uno de esos datos, señálalo; no lo inventes para completar la lista. Esa comprobación editorial no demuestra comprensión. El [piloto con lectores](../evals/reader-study.md) separa tareas, dudas y opinión de claridad.

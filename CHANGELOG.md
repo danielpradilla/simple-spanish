@@ -8,6 +8,7 @@
 - Comprobar entidades, bases de límites, valores admitidos, modalidad y orden de las operaciones al comparar original y resultado.
 - Revisar el documento completo, sus referencias y sus capas editables; añadir dos documentos sintéticos con código y diagramas.
 - Separar fidelidad, claridad y comprensión; registrar comparaciones con entradas comunes, modelo identificado y revisión ciega.
+- Preparar dos pasajes y diez tareas para lectores, con claves, consentimiento y denominadores que incluyen «no lo sé»; conservar las generaciones y sus ajustes sin simular participantes.
 
 ## 0.1.1 (2026-10-17)
 

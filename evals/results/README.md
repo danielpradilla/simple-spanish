@@ -10,6 +10,10 @@ El modelo resuelto fue `claude-sonnet-5-5`, mediante Claude Code 2.1.302 y esfue
 
 Los juicios son de un modelo, no de lectores humanos. La rúbrica del revisor se corrigió tras el primer dictamen. Los casos estaban disponibles durante el desarrollo y no existe una reserva no vista. No se atribuye una mejora causal o general a esta ejecución.
 
+## Preparación del piloto con lectores
+
+El [registro de materiales](2026-10-17-reader-materials.json) conserva dos peticiones con las instrucciones de `d1c80e3`, sus respuestas crudas y las tarjetas preparadas. En B se restauró la marca de ejemplo sintético, se adelantó una advertencia y se conservó un permiso que la respuesta había convertido en imperativo. Los ajustes del asistente están declarados. El [protocolo](../reader-study.md) usa esas tarjetas revisadas, no pretende validar una ejecución automática sin supervisión. No hay participantes ni resultados de comprensión.
+
 ## Línea base de traducción anterior
 
 El [registro de doce traducciones](2026-10-17-translation-baseline.json) usa la guía v0.1.1 de `feef2aa2152e71f073254a1fba8947ae86b7d806` y el mismo modelo identificado. Conserva las respuestas crudas, las instrucciones completas y las opciones no disponibles. Los literales protegidos se conservaron en esa ejecución; no incluye aprobación semántica ni comprensión humana.

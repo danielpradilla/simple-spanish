@@ -84,6 +84,8 @@ The [document corpus](evals/document-cases.json) adds two multi-section examples
 for distributed context, cross-references, code, and documentary diagrams.
 Saved [smoke responses and review limits](evals/results/README.md) are available.
 They are not a reader study or a reliability benchmark.
+A [reader pilot](evals/reader-study.md) includes passages, tasks, and answer keys.
+It has no participant results.
 
 ## Scope and limits
 

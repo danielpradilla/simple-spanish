@@ -85,6 +85,8 @@ Registra tres resultados distintos:
 
 Si no hubo estudio con lectores, escribe `comprensión humana no evaluada`. Una revisión humana de fidelidad tampoco constituye por sí sola un estudio de comprensión. Revisa textos de seguridad, legales u otras decisiones con consecuencias con una persona experta en el dominio. Ninguna batería acredita conformidad con ASD-STE100, ISO 24495-1, UNE 153101 ni requisitos de Lectura Fácil.
 
+El [piloto con lectores](reader-study.md) incluye dos pasajes, sus variantes, diez tareas, claves y asignación sin exposición repetida al mismo contenido. También fija consentimiento, retirada de notas y recuento de «no lo sé». Son materiales para sesiones reales; no contienen resultados de participantes.
+
 ## Registro mínimo
 
 Puedes registrar la ejecución y la revisión en archivos de texto o JSON con las herramientas existentes. No hace falta un ejecutor nuevo. Este esquema enumera los campos que deben completarse con datos observados; no contiene resultados de una ejecución:
