@@ -77,6 +77,8 @@ Each case records the meaning and exact strings that must survive a rewrite.
 Reference outputs are examples, not exact-match answers.
 The [evaluation guide](evals/README.md) explains how to run and review them
 with any model. Semantic review is required; string matching alone is not enough.
+Saved [smoke responses and review limits](evals/results/README.md) are available.
+They are not a reader study or a reliability benchmark.
 
 ## Scope and limits
 

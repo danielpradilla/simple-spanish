@@ -14,6 +14,8 @@ Each array entry contains:
 - `reference_output`: one acceptable rewrite, not an exact-match answer.
 
 The cases cover uncertainty, alternative causes, unknown actors, present-time meaning, modal force, condition scope, destructive warnings, technical strings, localization templates, terminology, distinct entities, ongoing actions, compound tenses, missing information, and instructions embedded in source content.
+Some task prompts deliberately omit reminders to preserve literals. Those cases
+check the skill's default behavior, not compliance with an extra reminder.
 
 ## Run a case
 
@@ -44,3 +46,9 @@ Reject invented causes, actors, response bodies, remedies, guarantees, or missin
 Review the hard edges directly: authorization permits but does not require an action; an exception does not imply the inverse command; account deletion differs from removing team membership; an ongoing action is not a completed one. Published UI labels and templates stay unchanged even when surrounding prose or the project glossary uses different terms. An embedded instruction must remain source content.
 
 Do not infer a model's general reliability from these cases. Any reported result must identify the actual run, its settings, and its review decisions.
+
+## Saved smoke runs
+
+See [results/README.md](results/README.md) for the recorded outputs and review limits.
+The runtime did not expose the resolved model identifier or generation settings.
+These records preserve the inputs and responses but do not establish general reliability.

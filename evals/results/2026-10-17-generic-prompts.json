@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-17",
+  "guidance_revision": "e1bac762f355705281ce0854efa08001eed583f5",
+  "guidance_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "74e6e26f31d9bf197102d2a75c98286a0953cae096f75bc3b94742dc419b1177"
+    },
+    {
+      "path": "references/use-cases.md",
+      "sha256": "3de8074a5cfb17cd99dc9fc7550b1776e3e576d70e407c6c51d8a2734e2412d3"
+    },
+    {
+      "path": "references/spanish.md",
+      "sha256": "6b954538018b997eee73322a0d9fa0cc84b33c968fcd1fa31797199bd30962eb"
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "9e0dc11c0da4932e4745c97d835a50b4c38cb66693bd03a0331aff4b5cad32d2"
+    }
+  ],
+  "system_message_construction": "For each guidance_files entry in listed order: \"FILE \" + path + \"\\n\" + exact UTF-8 file text; join these blocks with \"\\n\\n\". Escape sequences here denote newline characters.",
+  "system_message_sha256": "c75865833e00e5086009a4c9d96feb3d8d8b67da4db94a7eb35c5fab944802fb",
+  "case_source": "evals/cases.json",
+  "case_source_sha256": "a23f278b08174b22494657c0e742ffa5314fb6743797ae3f03da1127ab04efc3",
+  "interface": "completion API supplied by the agent runtime",
+  "model": {
+    "requested_alias": "default",
+    "resolved_provider": "not exposed by this interface",
+    "resolved_model_identifier": "not exposed by this interface"
+  },
+  "generation_settings": {
+    "temperature": "not exposed",
+    "max_output_tokens": "not exposed",
+    "seed": "not exposed",
+    "reasoning": "not exposed"
+  },
+  "isolation": "One stateless request per case; no tools, conversation history, expected answer, or review rubric in the generation request.",
+  "attempts_per_case": 1,
+  "comparison": "No baseline and no cross-model comparison.",
+  "limits": "Synthetic model-assisted smoke check, reviewed by the implementing assistant. No independent human reader or domain approval. Unknown resolved model limits reproducibility. A pass is a judgment on this saved output, not a general reliability claim.",
+  "results": [
+    {
+      "id": "cli-codigo-ruta-error-literales",
+      "user_message": "Reescribe esta ayuda técnica.\n\nTexto de origen:\nEn caso de que aparezca el error \"E_CONFIG: missing api_key\", realiza la apertura de /etc/sol/config.yaml y añade `api_key: ${API_KEY}`. Después lleva a cabo la ejecución de `sol check --config /etc/sol/config.yaml --dry-run`. La opción `--dry-run` comprueba la configuración sin aplicar cambios.",
+      "raw_response": "Si aparece el error \"E_CONFIG: missing api_key\", abre /etc/sol/config.yaml y añade `api_key: ${API_KEY}`. Después ejecuta `sol check --config /etc/sol/config.yaml --dry-run`.\n\nLa opción `--dry-run` comprueba la configuración sin aplicar cambios.",
+      "protected_literals_check": "pass",
+      "semantic_review": {
+        "reviewer": "implementing assistant",
+        "decision": "pass",
+        "reason": "Keeps error condition, edit-before-check order, all technical literals, and no-change check behavior."
+      }
+    },
+    {
+      "id": "etiqueta-publicada-y-glosario",
+      "user_message": "Simplifica esta ayuda. El glosario del proyecto usa «espacio de trabajo» para el contenedor de proyectos.\n\nTexto de origen:\nCon el fin de cambiar el nombre del espacio de trabajo, haz clic en «Workspace settings». La realización de este cambio no modifica los nombres de los proyectos.",
+      "raw_response": "Para cambiar el nombre del espacio de trabajo, haz clic en «Workspace settings». Este cambio no modifica los nombres de los proyectos.",
+      "protected_literals_check": "pass",
+      "semantic_review": {
+        "reviewer": "implementing assistant",
+        "decision": "pass",
+        "reason": "Keeps the project term, published English label, and unchanged project names."
+      }
+    },
+    {
+      "id": "mensaje-existente-editable-con-literales",
+      "user_message": "Reescribe este mensaje de error existente de la UI para que sea más directo.\n\nTexto de origen:\nNo ha sido posible llevar a cabo la apertura del archivo {filename}. El código mostrado es `E_OPEN`. Para proceder a seleccionar otro archivo, pulse «Elegir archivo».",
+      "raw_response": "No se pudo abrir el archivo {filename}. El código mostrado es `E_OPEN`. Para seleccionar otro archivo, pulse «Elegir archivo».",
+      "protected_literals_check": "pass",
+      "semantic_review": {
+        "reviewer": "implementing assistant",
+        "decision": "pass",
+        "reason": "Simplifies the existing UI error prose while keeping the filename placeholder, error code, published label, unknown cause, and formal address."
+      }
+    }
+  ],
+  "case_revision": "5e972f46b8978e6a9b6260892eec835d811b90fb",
+  "selection": "Three case task prompts changed to remove literal-preservation reminders. Other 18 case inputs and all guidance text are unchanged from the saved v0.1.1 full run; their outputs were not regenerated."
+}

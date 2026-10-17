@@ -6,6 +6,8 @@
 - Identify warning targets and remove an unsupported request-failure outcome from an example.
 - Keep an already clear confirmation unchanged and clarify Spanish gerund guidance.
 - Add two regression cases for existing UI copy and noun-modifying gerunds, for 21 cases in total.
+- Save raw model smoke responses, input hashes, pinned revisions, and explicit evaluation limits.
+- Remove preservation reminders from three task prompts and check the skill's default literal protection.
 
 ## 0.1.0 (2026-10-17)
 
