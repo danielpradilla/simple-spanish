@@ -26,6 +26,22 @@ Los siguientes ejemplos son sintéticos y solo ilustran el contexto indicado:
 
 Una traducción puede conservar el término técnico y explicar su sentido cuando la fuente lo define. No añadas una explicación por conocer un producto parecido.
 
+## Comprueba las decisiones que describe el texto
+
+Compara las respuestas del original y de la traducción a estas preguntas.
+Úsalas cuando correspondan al pasaje; no inventes una respuesta que falte.
+
+- ¿Qué entidad tiene cada límite y cuál es su base: por usuario, empresa o periodo?
+- ¿Qué valores se admiten y cuáles se rechazan, incluidos los casos frontera descritos?
+- ¿La condición es necesaria, suficiente o ambas? «Solo si» no ordena la rama contraria.
+- ¿La frase concede permiso, expresa capacidad u obliga a actuar?
+- ¿Qué sigue ejecutándose y qué debe terminar antes de pasar al siguiente paso?
+- ¿La confirmación procede de una persona o describe un resultado guardado?
+
+Conserva el tipo de cantidad que la fuente define. No conviertas un valor
+numérico en un importe monetario si no se indica que sea dinero. Tampoco
+añadas unidades o garantías para que la frase parezca más concreta.
+
 ## Recursos relacionados
 
 - [Gramática y terminología](spanish.md): modalidad, tiempos, variantes y términos distintos.

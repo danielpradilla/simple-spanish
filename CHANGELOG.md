@@ -5,6 +5,7 @@
 - Añadir doce casos sintéticos contrastivos de traducción técnica con requisitos semánticos y literales protegidos.
 - Consultar definiciones y glosarios del proyecto antes de elegir equivalentes técnicos, sin imponer un diccionario universal.
 - Aclarar el identificador de plan en una fuente sintética y conservar la entrada anterior en su registro histórico.
+- Comprobar entidades, bases de límites, valores admitidos, modalidad y orden de las operaciones al comparar original y resultado.
 
 ## 0.1.1 (2026-10-17)
 

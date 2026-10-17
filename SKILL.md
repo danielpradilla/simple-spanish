@@ -96,6 +96,9 @@ cualquier preferencia de estilo de esta skill, incluidos los límites de longitu
 3. Reescribe solo donde mejore la comprensión. Conserva lo que ya está claro.
 4. Compara original y resultado. Busca datos añadidos, omisiones, cambios de
    certeza y cambios de alcance. Comprueba los literales carácter por carácter.
+   Comprueba qué entidad tiene cada límite y por cada qué se calcula, qué
+   valores se admiten, qué condición permite cada acción y qué ocurre antes
+   o después. Distingue permiso, confirmación del usuario y resultado guardado.
 5. En un procedimiento, recorre cada rama. Comprueba que la advertencia y la
    condición aparecen antes de la acción correspondiente.
 
