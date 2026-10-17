@@ -7,3 +7,4 @@
 - Preserve uncertainty, optionality, unknown actors, and valid Spanish grammar.
 - Credit ESTE and Simple English with pinned source links and MIT notices.
 - Add genre guidance, examples, and a record of external sources and their limits.
+- Add 19 regression cases with semantic requirements, protected literals, and provider-neutral evaluation instructions.
