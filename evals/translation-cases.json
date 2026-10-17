@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sintetico-plazas-usuarios-por-empresa",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. The unlimited-company plan allows unlimited user seats within one company. If a company already has 40 users, adding user 41 does not reach a seat limit. The plan still covers only one company; it does not allow unlimited companies.",
+    "must_preserve": [
+      "El caso es sintético y unlimited-company es el identificador del plan.",
+      "Lo ilimitado son las plazas de usuario dentro de una empresa, no la cantidad de empresas.",
+      "Si la empresa ya tiene 40 usuarios, añadir el usuario 41 no alcanza un límite de plazas.",
+      "El plan sigue cubriendo solo una empresa; afirmar que permite empresas ilimitadas invierte el alcance."
+    ],
+    "protected_literals": ["unlimited-company", "40", "41"],
+    "reference_output": "Ejemplo sintético. El plan unlimited-company permite un número ilimitado de plazas de usuario dentro de una empresa. Si la empresa ya tiene 40 usuarios, añadir el usuario 41 no alcanza un límite de plazas. El plan sigue cubriendo solo una empresa; no permite un número ilimitado de empresas."
+  },
+  {
+    "id": "sintetico-plazas-empresas-ilimitadas",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. The plan with identifier portfolio allows unlimited companies, with 5 user seats per company. If one company already has 5 users, a sixth user exceeds its seat limit. Adding another company does not increase the first company's seat limit.",
+    "must_preserve": [
+      "El caso es sintético y portfolio es el identificador del plan.",
+      "El número de empresas es ilimitado, pero cada empresa tiene 5 plazas de usuario.",
+      "Si una empresa ya tiene 5 usuarios, un sexto usuario supera su límite.",
+      "Añadir otra empresa no aumenta las plazas de la primera; traducir empresas ilimitadas como usuarios ilimitados elimina la restricción."
+    ],
+    "protected_literals": ["portfolio", "5"],
+    "reference_output": "Ejemplo sintético. El plan con identificador portfolio permite un número ilimitado de empresas, con 5 plazas de usuario por empresa. Si una empresa ya tiene 5 usuarios, un sexto usuario supera su límite de plazas. Añadir otra empresa no aumenta el límite de plazas de la primera."
+  },
+  {
+    "id": "sintetico-nonblank-rechaza-espacios",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. The alias must be nonblank: it must contain at least one character other than an ordinary space. If the alias is empty or contains only ordinary spaces, validation fails. A value containing three ordinary spaces is not empty, but it still fails this rule.",
+    "must_preserve": [
+      "El caso es sintético y la regla exige al menos un carácter distinto de un espacio ordinario.",
+      "La validación falla tanto para el alias vacío como para uno compuesto solo por espacios ordinarios.",
+      "Tres espacios ordinarios forman un valor no vacío que aun así incumple la regla.",
+      "No reducir nonblank a no vacío ni extender la regla a null, Unicode u otros caracteres no descritos."
+    ],
+    "protected_literals": [],
+    "reference_output": "Ejemplo sintético. El alias debe contener al menos un carácter distinto de un espacio ordinario. Si está vacío o solo contiene espacios ordinarios, la validación falla. Un valor de tres espacios ordinarios no está vacío, pero también incumple esta regla."
+  },
+  {
+    "id": "sintetico-no-vacio-acepta-espacios",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. The raw value must be non-empty: its length must be greater than zero. Ordinary spaces count toward that length. If the value contains three ordinary spaces, validation passes. An empty value fails; this rule does not require a nonblank character.",
+    "must_preserve": [
+      "El caso es sintético y la condición es una longitud mayor que cero.",
+      "Los espacios ordinarios cuentan para la longitud y un valor de tres espacios ordinarios pasa la validación.",
+      "Un valor vacío falla; exigir un carácter distinto de un espacio haría fallar el contraejemplo aceptado.",
+      "No añadir recorte de espacios ni tratamiento de null o Unicode."
+    ],
+    "protected_literals": [],
+    "reference_output": "Ejemplo sintético. El valor sin procesar no debe estar vacío: su longitud debe ser mayor que cero. Los espacios ordinarios cuentan para esa longitud. Si el valor contiene tres espacios ordinarios, pasa la validación. Un valor vacío falla; esta regla no exige un carácter distinto de un espacio ordinario."
+  },
+  {
+    "id": "sintetico-signed-ajuste-con-signo",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Apply the signed adjustment to the stock count. If the adjustment is -3, subtract 3 units; if it is +3, add 3 units. Replacing -3 with 3 reverses the effect. Signed describes the numeric sign here; no signature is required.",
+    "must_preserve": [
+      "El caso es sintético y signed describe el signo numérico del ajuste de existencias.",
+      "Con -3 se restan 3 unidades y con +3 se añaden 3 unidades.",
+      "Sustituir -3 por 3 invierte el efecto; no omitir el signo ni convertir ambos ajustes en incrementos.",
+      "No se requiere una firma; traducir signed como firmado atribuye un requisito que la fuente excluye."
+    ],
+    "protected_literals": ["-3", "+3", "3"],
+    "reference_output": "Ejemplo sintético. Aplica el ajuste con signo a la cantidad de existencias. Si el ajuste es -3, resta 3 unidades; si es +3, añade 3 unidades. Sustituir -3 por 3 invierte el efecto. Aquí se habla del signo numérico; no se requiere ninguna firma."
+  },
+  {
+    "id": "sintetico-signed-documento-firmado",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Accept the signed adjustment form only if it bears the reviewer's signature. A form showing +3 but lacking that signature must be rejected. Here signed refers to the signature on the form, not to the sign of the adjustment amount.",
+    "must_preserve": [
+      "El caso es sintético y signed describe la firma del formulario.",
+      "La firma de quien revisa es una condición necesaria para aceptar el formulario, no una orden de aceptar todo formulario firmado.",
+      "Un formulario con +3 pero sin esa firma debe rechazarse.",
+      "El signo positivo de la cantidad no satisface el requisito de firma; no traducir firmado como con signo."
+    ],
+    "protected_literals": ["+3"],
+    "reference_output": "Ejemplo sintético. Acepta el formulario de ajuste firmado solo si lleva la firma de quien lo revisa. Un formulario que indique +3 pero no tenga esa firma debe rechazarse. Aquí se habla de la firma del formulario, no del signo de la cantidad del ajuste."
+  },
+  {
+    "id": "sintetico-checkout-alojado-contrato",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. If the contract has approved terms allowing access before payment is collected, it can be activated without completing the provider-hosted checkout. That checkout step is not mandatory for contract activation; the obligation to pay remains. A payment receipt alone does not grant access.",
+    "must_preserve": [
+      "El caso es sintético y checkout es el paso alojado por el proveedor.",
+      "Si el contrato tiene condiciones aprobadas que permiten acceso antes del cobro, puede activarse sin completar ese paso.",
+      "La activación es posible bajo esa condición, no obligatoria.",
+      "Que el checkout alojado no sea obligatorio para activar el contrato no elimina la obligación de pagar.",
+      "Un comprobante de pago por sí solo no concede acceso.",
+      "No añadir excepciones, importes, plazos de cobro ni permisos que la fuente no indica."
+    ],
+    "protected_literals": [],
+    "reference_output": "Ejemplo sintético. Si el contrato tiene condiciones aprobadas que permiten el acceso antes del cobro, puede activarse sin completar el proceso de checkout alojado por el proveedor. Ese paso no es obligatorio para activar el contrato; la obligación de pagar se mantiene. Un comprobante de pago por sí solo no concede acceso."
+  },
+  {
+    "id": "sintetico-checkout-compra-pago",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Store checkout is the purchase flow where the customer reviews the order and submits payment. If payment fails, checkout is not complete. Opening checkout alone does not mean payment succeeded. This flow does not lend equipment or record its return.",
+    "must_preserve": [
+      "El caso es sintético y checkout es un proceso de compra que incluye revisar el pedido y enviar el pago.",
+      "Si falla el pago, el proceso no está completo.",
+      "Abrir el proceso de compra por sí solo no demuestra que el pago haya tenido éxito.",
+      "El proceso no presta equipos ni registra devoluciones; no sustituir checkout automáticamente por préstamo ni equipararlo a pago ya realizado.",
+      "No añadir importes, cargos o condiciones de pago ausentes."
+    ],
+    "protected_literals": [],
+    "reference_output": "Ejemplo sintético. La finalización de compra en la tienda es el proceso en el que el cliente revisa el pedido y envía el pago. Si el pago falla, el proceso no está completo. Abrir este proceso no significa por sí solo que el pago haya tenido éxito. El proceso no presta equipos ni registra su devolución."
+  },
+  {
+    "id": "sintetico-drain-espera-trabajos",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Before stopping worker-a, drain it: stop assigning new jobs and wait for its active jobs to finish. If two jobs are still running, draining is not complete. Merely pausing new assignments does not satisfy the wait requirement. Stop worker-a only after draining is complete.",
+    "must_preserve": [
+      "El caso es sintético y drenar worker-a exige dejar de asignarle nuevos trabajos y esperar a que terminen los activos.",
+      "Si quedan dos trabajos en ejecución, el drenaje no está completo.",
+      "Pausar solo las nuevas asignaciones no cumple la espera requerida.",
+      "Solo se puede detener worker-a después de completar el drenaje; no convertir drain en una pausa que permita detenerlo con trabajos activos."
+    ],
+    "protected_literals": ["worker-a"],
+    "reference_output": "Ejemplo sintético. Antes de detener worker-a, drénalo: deja de asignarle nuevos trabajos y espera a que terminen los trabajos activos. Si aún hay dos trabajos en ejecución, el drenaje no está completo. Pausar solo las nuevas asignaciones no cumple el requisito de espera. Detén worker-a solo después de completar el drenaje."
+  },
+  {
+    "id": "sintetico-pause-no-espera-drenaje",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Pause dispatch to worker-b by disabling new assignments. The pause takes effect even if two jobs are still running; those jobs continue. Do not wait for them to finish before reporting the pause. A paused worker is not necessarily drained.",
+    "must_preserve": [
+      "El caso es sintético y pausar la distribución a worker-b desactiva las nuevas asignaciones.",
+      "La pausa entra en vigor aunque sigan ejecutándose dos trabajos, que continúan.",
+      "Se prohíbe esperar a que terminen para informar de la pausa.",
+      "Un trabajador pausado no está necesariamente drenado; traducir pausa como drenaje añadiría una espera y una condición que la fuente excluye."
+    ],
+    "protected_literals": ["worker-b"],
+    "reference_output": "Ejemplo sintético. Pausa la distribución de trabajos a worker-b desactivando las nuevas asignaciones. La pausa entra en vigor aunque aún haya dos trabajos en ejecución; esos trabajos continúan. No esperes a que terminen para informar de la pausa. Un trabajador pausado no está necesariamente drenado."
+  },
+  {
+    "id": "sintetico-commit-transaccion-bd",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Commit the database transaction only if both updates succeed. If either update fails, roll back the transaction instead. Clicking the UI button Confirm does not commit the database transaction; it only closes the review dialog.",
+    "must_preserve": [
+      "El caso es sintético y commit se refiere a confirmar una transacción de base de datos.",
+      "El éxito de ambas actualizaciones es condición necesaria para confirmar la transacción.",
+      "Si falla cualquiera de las dos actualizaciones, hay que revertir la transacción en lugar de confirmarla.",
+      "El botón Confirm solo cierra el diálogo de revisión y no confirma la transacción de base de datos.",
+      "No añadir garantías de durabilidad, persistencia frente a fallos ni efectos de Git."
+    ],
+    "protected_literals": ["Confirm"],
+    "reference_output": "Ejemplo sintético. Confirma la transacción de base de datos solo si ambas actualizaciones tienen éxito. Si alguna falla, revierte la transacción en lugar de confirmarla. Pulsar el botón Confirm de la interfaz solo cierra el diálogo de revisión; no confirma la transacción de base de datos."
+  },
+  {
+    "id": "sintetico-confirm-interfaz-sin-commit",
+    "task": "Traduce este texto al español claro sin añadir información.",
+    "input": "Synthetic example. Click Confirm only if the preview shows the intended filter. The button closes the preview and applies the filter to the displayed list. If the preview shows a different filter, do not click it. This UI confirmation neither commits a database transaction nor creates a Git commit.",
+    "must_preserve": [
+      "El caso es sintético y Confirm es la etiqueta publicada del botón.",
+      "Solo se debe pulsar el botón si la vista previa muestra el filtro deseado; si muestra otro, no debe pulsarse.",
+      "El botón cierra la vista previa y aplica el filtro a la lista mostrada.",
+      "La confirmación de interfaz no confirma una transacción de base de datos ni crea un commit de Git; no sustituirla por ninguna de esas operaciones."
+    ],
+    "protected_literals": ["Confirm", "Git"],
+    "reference_output": "Ejemplo sintético. Pulsa Confirm solo si la vista previa muestra el filtro deseado. El botón cierra la vista previa y aplica el filtro a la lista mostrada. Si la vista previa muestra otro filtro, no lo pulses. Esta confirmación de interfaz no confirma una transacción de base de datos ni crea un commit de Git."
+  }
+]

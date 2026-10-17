@@ -2,6 +2,13 @@
 
 `cases.json` contains 21 Spanish writing cases. They test meaning, safety boundaries, and exact source strings, not a preferred wording. No runner, provider account, or dependency is required. These fixtures do not report model results or establish a pass rate.
 
+`translation-cases.json` adds 12 synthetic English-to-Spanish cases. Each of six
+families has contrasting contexts: user seats/company count, nonblank/non-empty,
+numeric sign/signature, checkout/payment, drain/pause, and transaction/UI confirmation.
+These examples are inspired by observed translation risks, not verbatim AssetGo
+records or a measurement of its error rate. They use the same case fields and
+review procedure below; do not infer one universal translation for each word.
+
 ## Case fields
 
 Each array entry contains:

@@ -1,5 +1,9 @@
 # Changelog
 
+## En desarrollo
+
+- Añadir doce casos sintéticos contrastivos de traducción técnica con requisitos semánticos y literales protegidos.
+
 ## 0.1.1 (2026-10-17)
 
 - Distinguish editable error and UI copy from protected literals quoted inside it.

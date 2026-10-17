@@ -43,3 +43,15 @@ it did not establish reader comprehension or production safety.
 These results do not prove that another request, model, or run preserves meaning.
 Review safety-critical, legal, and other consequential text with a domain expert.
 No commands included in the source passages were executed.
+
+## Línea base de traducción con modelo identificado
+
+[Registro de doce traducciones](2026-10-17-translation-baseline.json).
+Usa la guía v0.1.1 de `feef2aa2152e71f073254a1fba8947ae86b7d806`,
+Claude Code 2.1.302 y el modelo resuelto `claude-sonnet-5-5`, con esfuerzo `medium`.
+Cada caso se ejecutó en un proceso nuevo, sin herramientas, MCP, persistencia
+de sesión ni personalizaciones del cliente. Se conservan las respuestas crudas,
+las instrucciones completas y las opciones no expuestas como no disponibles.
+Los doce casos conservan los literales protegidos en esta ejecución.
+Esto no es una aprobación semántica ni una medición de comprensión humana.
+Los registros históricos anteriores no se sustituyen.

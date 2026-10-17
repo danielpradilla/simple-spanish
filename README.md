@@ -77,6 +77,9 @@ Each case records the meaning and exact strings that must survive a rewrite.
 Reference outputs are examples, not exact-match answers.
 The [evaluation guide](evals/README.md) explains how to run and review them
 with any model. Semantic review is required; string matching alone is not enough.
+The separate [translation corpus](evals/translation-cases.json) adds 12 synthetic
+English-to-Spanish cases with contrasting technical meanings. It checks concepts
+and operational effects, not a universal dictionary of word replacements.
 Saved [smoke responses and review limits](evals/results/README.md) are available.
 They are not a reader study or a reliability benchmark.
 
