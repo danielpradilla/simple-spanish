@@ -80,3 +80,14 @@ introducida en la traducción. Se usa para concretar la revisión del significad
 y del contexto. No se reproduce su catálogo completo ni se declara conformidad
 o una puntuación MQM. Los ejemplos de traducción de esta skill son sintéticos;
 sus equivalentes dependen del contexto y no forman un diccionario universal.
+
+## Comparación de versiones
+
+La [guía de evaluación de Agent Skills](https://agentskills.io/skill-creation/evaluating-skills.md)
+inspira las sesiones independientes, la comparación con una versión anterior,
+los registros crudos y la revisión ciega. Este proyecto mantiene su contrato
+de casos y no exige el formato de carpetas ni una plataforma de evaluación.
+Una preferencia de estilo no compensa un cambio de significado. La revisión
+por otro modelo no equivale a la revisión de un especialista ni a una prueba
+de comprensión con lectores.
+
