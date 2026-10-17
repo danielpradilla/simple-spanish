@@ -80,6 +80,8 @@ with any model. Semantic review is required; string matching alone is not enough
 The separate [translation corpus](evals/translation-cases.json) adds 12 synthetic
 English-to-Spanish cases with contrasting technical meanings. It checks concepts
 and operational effects, not a universal dictionary of word replacements.
+The [document corpus](evals/document-cases.json) adds two multi-section examples
+for distributed context, cross-references, code, and documentary diagrams.
 Saved [smoke responses and review limits](evals/results/README.md) are available.
 They are not a reader study or a reliability benchmark.
 

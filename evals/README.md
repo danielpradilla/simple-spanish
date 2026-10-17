@@ -9,6 +9,11 @@ These examples are inspired by observed translation risks, not verbatim AssetGo
 records or a measurement of its error rate. They use the same case fields and
 review procedure below; do not infer one universal translation for each word.
 
+`document-cases.json` adds two complete synthetic documents. They check definitions
+used across sections, published UI labels, internal anchors, immutable executable
+examples, and the editable text layer of a Mermaid diagram. Their semantic
+requirements also serve as task questions; model review is not a reader study.
+
 ## Case fields
 
 Each array entry contains:

@@ -31,6 +31,9 @@ Para dudas de gramática o terminología, lee
 Si traduces documentación técnica, lee
 [references/translation.md](references/translation.md) para identificar los
 conceptos y consultar el contexto antes de elegir equivalentes.
+Si traduces o revisas un documento completo, lee
+[references/documents.md](references/documents.md) para conservar el contexto
+entre secciones y los contratos de enlaces, ejemplos y diagramas.
 Las fuentes y las diferencias con ESTE y simple-english están en
 [references/sources.md](references/sources.md).
 
@@ -101,6 +104,9 @@ cualquier preferencia de estilo de esta skill, incluidos los límites de longitu
    o después. Distingue permiso, confirmación del usuario y resultado guardado.
 5. En un procedimiento, recorre cada rama. Comprueba que la advertencia y la
    condición aparecen antes de la acción correspondiente.
+6. En un documento completo, revisa también los referentes, las definiciones,
+   los requisitos entre secciones y las referencias cruzadas. No basta con
+   que cada párrafo aislado suene claro.
 
 ## Respuesta
 

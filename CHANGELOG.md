@@ -6,6 +6,7 @@
 - Consultar definiciones y glosarios del proyecto antes de elegir equivalentes técnicos, sin imponer un diccionario universal.
 - Aclarar el identificador de plan en una fuente sintética y conservar la entrada anterior en su registro histórico.
 - Comprobar entidades, bases de límites, valores admitidos, modalidad y orden de las operaciones al comparar original y resultado.
+- Revisar el documento completo, sus referencias y sus capas editables; añadir dos documentos sintéticos con código y diagramas.
 
 ## 0.1.1 (2026-10-17)
 
